@@ -1,21 +1,16 @@
 <script>
-	let a = 5
-	let b = 2
-	let c = 0, d= 0
-	$:{
-		c = a + b
-		d = a - b
-	}
+	/* Fjern state og derived før eksemplet brukes!*/ 
+	let a = $state(5)
+	let b = $state(2)
+	let c = $derived(a+b)
+	let	d = $derived(a-b)
+	
 </script>
 
-<input bind:value={a} type="number">
-<span> + </span>
-<input bind:value={b} type="number">
-<span> = </span>
-<span> {c} </span><br>
-{a}-{b}={d}
+<input bind:value={a} type="number"> +  <input bind:value={b} type="number"> = {c}<br>
+<input bind:value={a} type="number"> - <input bind:value={b} type="number"> = {d}<br>
 <style>
 	input{
-		width: 80px;
+		width: 2rem;
 	}
 </style>
