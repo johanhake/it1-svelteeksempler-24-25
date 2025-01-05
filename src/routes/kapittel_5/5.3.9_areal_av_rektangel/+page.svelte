@@ -1,8 +1,9 @@
 <script>
-	let lengde = 200
-	let bredde = 80
-	$: areal = lengde * bredde
-	$: omkrets = 2*lengde + 2*bredde
+	/* Fjern state og derived før eksemplet brukes!*/ 
+	let lengde = $state(200)
+	let bredde = $state(80)
+	let areal = $derived(lengde * bredde)
+	let omkrets = $derived(2*lengde + 2*bredde)
 </script>
 
 <header>
