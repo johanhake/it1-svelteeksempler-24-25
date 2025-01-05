@@ -6,11 +6,11 @@
 			{nr:"5.2.4", navn: "Datatyper"},
 			{nr:"5.2.5", navn: "Konkatenering"},
 		],[
-			{nr:"5.3", navn: "Bruk av Math"},
-			{nr:"5", navn: "String metoder"},
 			{nr:"5.3.1", navn: "Invitasjon"},
-			{nr:"5.3.2", navn: "Omkretsen til en sirkel"},
-			{nr:"5.3.3", navn: "Sette farge til en overskrift"},
+			{nr:"5.3.2", navn: "Bruk av Math"},
+			{nr:"5.3.3", navn: "Omkretsen til en sirkel"},
+			{nr:"5.3.4", navn: "String metoder"},
+			{nr:"5.3.5", navn: "Sette farge til en overskrift"},
 			{nr:"5.3.8", navn: "Regnemaskin med reaktiv variabel"},
 			{nr:"5.3.9", navn: "Areal av rektangel"},
 		]

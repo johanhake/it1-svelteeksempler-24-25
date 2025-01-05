@@ -4,7 +4,7 @@
 </script>
 
 <h1 style="color: {farge}; font-size:{fontSize}px">Inline CSS</h1>
-<input bind:value={farge}>
+<input type="color" bind:value={farge}>
 <input type="number" bind:value={fontSize}>
 
 
