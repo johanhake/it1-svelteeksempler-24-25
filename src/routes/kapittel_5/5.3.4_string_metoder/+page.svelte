@@ -9,13 +9,13 @@
 </p>
 <p>
 	string.slice(start, slutt):
-	<b> { overskrift.slice(2, 6) } </b>
+	<b> { overskrift } </b>
 </p>
 <p>
 	string.replace("Gammel tekst", "Ny tekst"):
+	<b> { overskrift } </b>
+</p>
+<p>
+	string.replace("Gammel tekst", "Ny tekst").toUpperCase():
 	<b> { overskrift.replace("metoder", "Bean") } </b>
-</p>
-<p>
-	string.replace("Gammel tekst", "Ny tekst"):
-	<b> { overskrift.replace("metoder", "Bean").toUpperCase() } </b>
 </p>

@@ -12,7 +12,7 @@
 </header>
 Omkrets: {omkrets} m
 <main>
-	<div style="width: {lengde}px; height: {bredde}px">
+	<div style="width: 200px; height: 80px">
 		Arealet er {areal} m<sup>2</sup>
 	</div>
 </main>
