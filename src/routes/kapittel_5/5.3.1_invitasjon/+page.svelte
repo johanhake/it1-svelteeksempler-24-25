@@ -2,7 +2,7 @@
 	let navn = "Sven Sveinsen"
 </script>
 
-<label>Hvem skal komme på festen: <input bind:value={navn}></label>
+<label>Hvem skal komme på festen: <input value={navn}></label>
 
 <h1>Kjære {navn}</h1>
 <p>

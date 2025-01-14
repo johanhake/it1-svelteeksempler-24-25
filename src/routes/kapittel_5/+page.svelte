@@ -26,10 +26,19 @@
 		{nr:"5.07", navn: "bokstav"},
 		{nr:"5.08", navn: "Dele opp"},
 		{nr:"5.09", navn: "Regneopperasjon"},
+		{nr:"5.10", navn: "Skandinaviske tegn"},
+		{nr:"5.11", navn: "Celsius farenheit"},
+		{nr:"5.12", navn: "Pig latin"},
+		{nr:"5.13", navn: "Glider"},
+		{nr:"5.14", navn: "Hello world"},
+		{nr:"5.15", navn: "Kalkulator"},
 		]
 
-</script>
+	// Vartiabel for å vise oppgaver
+	let vis_oppgaver = false;
 
+</script>
+<main>
 <h1>Eksempler fra kap 5</h1>
 
 <div class="eksempler">
@@ -44,14 +53,33 @@
 	</div>
 	{/each}
 </div>
-<h1>Oppgaver fra kap 5</h1>
-<div class="oppgaver">
+
+<h1 id="vis-oppgaver" on:click={()=>{vis_oppgaver=!vis_oppgaver}} title="Vis løsningsforslag">Løsningsforslag oppgaver fra kap 5</h1>
+{#if vis_oppgaver}
+<div class="oppgaver" style="height:{2.5*(oppgaver.length/eksempler.length)}em">
 {#each oppgaver as oppgave}
-	<a href="/kapittel_5/oppgave_{oppgave.nr}_{(oppgave.navn.toLowerCase().split(" ").join("_"))}">{oppgave.nr} {oppgave.navn}</a>
+	<a href="/kapittel_5/oppgave_{oppgave.nr}_{(oppgave.navn.toLowerCase().split(" ").join("_"))}" style="width:{100/eksempler.length-5}%">{oppgave.nr} {oppgave.navn}</a>
 {/each}
 </div>
-
+{console.log(100/eksempler.length)}
+{/if}
+</main>
 <style>
+	h1{
+		padding:0.5em;
+	}
+
+	#vis-oppgaver:hover{
+		cursor: pointer;
+		background-color: antiquewhite;
+	}
+
+	.oppgaver{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
 	.eksempler{
 		display: flex;
 		gap: 10px;
@@ -66,7 +94,7 @@
 	}
 	.eksempler > div a, .oppgaver a{
 		text-decoration: none;
-		padding: 10px;
+		padding: 0.5em;
 	}
 	.eksempler > div a:hover, .oppgaver a:hover{
 		background-color: antiquewhite;

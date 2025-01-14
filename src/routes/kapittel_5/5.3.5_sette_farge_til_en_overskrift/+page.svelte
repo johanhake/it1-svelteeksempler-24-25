@@ -9,7 +9,8 @@
 
 
 <style>
-h1{
-		color: {farge}; /*FEIL!*/
+/*h1{
+	color: {farge}; FEIL!
 	}
+*/
 </style>

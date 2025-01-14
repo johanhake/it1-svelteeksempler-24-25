@@ -5,7 +5,7 @@
 <h1>{overskrift}</h1>
 <p>
 	string.toUpperCase():
-	<b> { overskrift.toUpperCase() } </b>
+	<b> { overskrift } </b>
 </p>
 <p>
 	string.slice(start, slutt):
