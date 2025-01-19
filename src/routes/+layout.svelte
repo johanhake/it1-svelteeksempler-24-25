@@ -12,10 +12,10 @@
 				<a href="/">Hovedsiden</a>
 			</li>
 			<li aria-current={page.url.pathname === '/kapittel_5' ? 'page' : undefined}>
-				<a href="/kapittel_5">Eksempler kap 5</a>
+				<a href="/kapittel_5">Kapittel 5</a>
 			</li>
 			<li aria-current={page.url.pathname === '/kapittel_6' ? 'page' : undefined}>
-				<a href="/kapittel_6">Eksempler kap 6</a>
+				<a href="/kapittel_6">Kapittel 6</a>
 			</li>
 			<li aria-current={page.url.pathname === '/prosjekt' ? 'page' : undefined}>
 				<a href="/prosjekt">Prosjekter</a>

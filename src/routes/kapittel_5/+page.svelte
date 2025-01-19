@@ -48,7 +48,7 @@
 			{#if eks_indeks == 0}
 				<h3>Eksempler fra 5.{under_indeks+2}</h3>
 			{/if}
-			<a href="/kapittel_5/{eks.nr}_{(eks.navn.toLowerCase().split(" ").join("_"))}">{eks.nr} {eks.navn}</a>
+			<a href="/kapittel_5/{eks.nr.slice(0,3)}_eksempler/{eks.nr}_{(eks.navn.toLowerCase().split(" ").join("_"))}">{eks.nr} {eks.navn}</a>
 		{/each}
 	</div>
 	{/each}
@@ -58,7 +58,7 @@
 {#if vis_oppgaver}
 <div class="oppgaver" style="height:{2.5*(oppgaver.length/eksempler.length)}em">
 {#each oppgaver as oppgave}
-	<a href="/kapittel_5/oppgave_{oppgave.nr}_{(oppgave.navn.toLowerCase().split(" ").join("_"))}" style="width:{100/eksempler.length-5}%">{oppgave.nr} {oppgave.navn}</a>
+	<a href="/kapittel_5/oppgaver/oppgave_{oppgave.nr}_{(oppgave.navn.toLowerCase().split(" ").join("_"))}" style="width:{100/eksempler.length-5}%">{oppgave.nr} {oppgave.navn}</a>
 {/each}
 </div>
 {console.log(100/eksempler.length)}
