@@ -4,8 +4,8 @@
    </script>
 
    <p>
-	  Datatypen til alder er {alder}.
+	  Datatypen til alder er {typeof alder}.
    </p>
    <p>
-	 Datatypen til navn er {navn}.
+	 Datatypen til navn er {typeof navn}.
   </p>
