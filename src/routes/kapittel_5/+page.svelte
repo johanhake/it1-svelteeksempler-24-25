@@ -77,16 +77,15 @@
 		{/each}
 	</div>
 
-	<h1
+	<button
 		id="vis-oppgaver"
 		style="background-color:{vis_oppgaver ? 'LightSalmon' : 'YellowGreen'}"
 		on:click={() => {
 			vis_oppgaver = !vis_oppgaver;
 		}}
 		title="Vis løsningsforslag"
+		><h1>Løsningsforslag oppgaver fra kap 5</h1></button
 	>
-		Løsningsforslag oppgaver fra kap 5
-	</h1>
 	{#if vis_oppgaver}
 		<div
 			class="oppgaver"
@@ -115,9 +114,9 @@
 		padding: 0.5em;
 	}
 
-	h4{
+	h4 {
 		margin: 0;
-		padding: 0.5em;		
+		padding: 0.5em;
 	}
 
 	#vis-oppgaver:hover {
