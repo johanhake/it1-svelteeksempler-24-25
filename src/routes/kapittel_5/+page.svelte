@@ -14,6 +14,21 @@
 			{ nr: "5.3.5", navn: "Sette farge til en overskrift" },
 			{ nr: "5.3.8", navn: "Regnemaskin med reaktiv variabel" },
 			{ nr: "5.3.9", navn: "Areal av rektangel" },
+			{ nr: "5.3.x", navn: "Andregrads-funksjon" },
+		],
+		[
+			{ nr: "5.4.1", navn: "Sant usant" },
+			{ nr: "5.4.2", navn: "If-setning" },
+			{ nr: "5.4.3", navn: "Ruter bilett" },
+			{ nr: "5.4.4", navn: "Rik og eller berømt" },
+			{ nr: "5.4.5", navn: "Gaming" },
+			{ nr: "5.4.6", navn: "Ruter bilett svelte" },
+			{
+				nr: "5.4.6.5",
+				navn: "Ruter bilett svelte med spørsmåls-operator",
+			},
+			{ nr: "5.4.7", navn: "Sammenligne tekster" },
+			{ nr: "5.4.8", navn: "Rik og eller berømt svelte" },
 		],
 	];
 
@@ -110,6 +125,10 @@
 </main>
 
 <style>
+	button {
+		width: 100%;
+	}
+
 	h1 {
 		padding: 0.5em;
 	}
