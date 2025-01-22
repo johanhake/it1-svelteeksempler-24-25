@@ -5,17 +5,17 @@
 <h1>{overskrift}</h1>
 <p>
 	string.toUpperCase():
-	<b> { overskrift } </b>
+	<b> { overskrift.toUpperCase() } </b>
 </p>
 <p>
 	string.slice(start, slutt):
-	<b> { overskrift } </b>
+	<b> { overskrift.slice(7) } </b>
 </p>
 <p>
 	string.replace("Gammel tekst", "Ny tekst"):
-	<b> { overskrift } </b>
+	<b> { overskrift.replace("metoder", "funksjoner") } </b>
 </p>
 <p>
 	string.replace("Gammel tekst", "Ny tekst").toUpperCase():
-	<b> { overskrift.replace("metoder", "Bean") } </b>
+	<b> { overskrift.replace("metoder", "funksjoner").toUpperCase() } </b>
 </p>

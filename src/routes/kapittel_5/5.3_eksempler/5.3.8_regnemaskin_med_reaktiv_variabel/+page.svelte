@@ -1,8 +1,8 @@
 <script>
-	let a = 5
-	let b = 2
-	let c = a+b
-	let	d = a-b
+	let a = $state(5)
+	let b = $state(2)
+	let c = $derived(a+b)
+	let	d = $derived(a-b)
 	
 </script>
 

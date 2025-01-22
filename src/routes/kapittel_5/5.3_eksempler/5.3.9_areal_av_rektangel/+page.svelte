@@ -1,8 +1,8 @@
 <script>
 	let lengde = $state(200)
 	let bredde = $state(80)
-	let areal = lengde * bredde
-	let omkrets = 2*lengde + 2*bredde
+	let areal = $derived(lengde * bredde)
+	let omkrets = $derived(2*lengde + 2*bredde)
 </script>
 
 <header>
@@ -11,7 +11,7 @@
 </header>
 Omkrets: {omkrets} m
 <main>
-	<div style="width: 200px; height: 80px">
+	<div style="width: {lengde}px; height: {bredde}px">
 		Arealet er {areal} m<sup>2</sup>
 	</div>
 </main>
