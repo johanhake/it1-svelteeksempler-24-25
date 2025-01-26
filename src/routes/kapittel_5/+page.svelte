@@ -56,6 +56,14 @@
 			{ nr: "5.16", navn: "Beregninger" },
 			{ nr: "5.18", navn: "Pig latin II" },
 			{ nr: "5.19", navn: "Vektorprodukt" },
+		],[
+			{ nr: "5.21", navn: "True eller false" },
+			{ nr: "5.22", navn: "Større enn" },
+			{ nr: "5.23", navn: "Kvakk" },
+			{ nr: "5.24", navn: "Høyde" },
+			{ nr: "5.25", navn: "Grunnstoff" },
+			{ nr: "5.26", navn: "Minibank" },
+			{ nr: "5.27", navn: "Surt" },
 		],
 	];
 
