@@ -1,8 +1,16 @@
 <script>
 // @ts-nocheck
 
-	let betale = 0
-	let alder = "";
+	let betale = $state(0)
+	let alder = $state(0)
+
+	$effect(()=>{
+		if (alder < 18 || alder >=65) {
+			betale = 18
+		} else {
+			betale = 36
+		}
+	})
  </script>
  <h1>
 	 Hva skal du betale på ruter?

@@ -22,6 +22,6 @@
 	 </p>
  {:else}
  <p>
-	Du skal betale 36 kr.
+	Du skal betale {alder < 18 || alder >= 65 ? 18 : 36} kr.
  </p>
  {/if}
