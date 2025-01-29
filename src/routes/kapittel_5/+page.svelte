@@ -29,7 +29,20 @@
 			},
 			{ nr: "5.4.7", navn: "Sammenligne tekster" },
 			{ nr: "5.4.8", navn: "Rik og eller berømt svelte" },
-		],
+		],[
+			{nr:"5.5.1", navn: "Telle antall tegn og ord"},
+			{nr:"5.5.2", navn: "Grense for antall tegn tilatt"},
+			{nr:"5.5.3", navn: "Sjekk svar fra Quiz"},
+			{nr:"5.5.4", navn: "Finn ordet i en tekst"},
+		],[
+			{nr:"5.6.1", navn: "Bytt ordet med en funksjon"},
+			{nr:"5.6.2", navn: "Bytt president i USA"},
+			{nr:"5.6.3", navn: "Øke verdi når vi klikker på en knapp"},
+			{nr:"5.6.4", navn: "Snurre en tekst rundt når vi klikker på en knapp"},
+			{nr:"5.6.5", navn: "Funksjon med to parameterer"},
+			{nr:"5.6.6", navn: "Endre navn med klikk på en knapp"},
+			{nr:"5.6.x", navn: "Andregradslikning"},
+		]
 	];
 
 	const oppgaver = [
