@@ -11,10 +11,15 @@
 </script>
 
 <input bind:value={søkeord} />
-{#if tekst.includes(søkeord)}
+{#if søkeord !== "" && tekst.includes(søkeord)}
 	<p>Søkeordet er funnet i teksten</p>
-	{tekst.replace(søkeord, "<b>" + søkeord + "</b>")}
-{:else}
+	{@html tekst.replace(søkeord, "<b>" + søkeord + "</b>")}
+	<br>
+	<br>
+	<!-- Bruke split og join på en fancy måte-->
+	{@html tekst.split(søkeord).join("<b>" + søkeord + "</b>")}
+
+	{:else}
 	<p>Søkeordet er <b>ikke</b> funnet i teksten</p>
 	{tekst}
 {/if}

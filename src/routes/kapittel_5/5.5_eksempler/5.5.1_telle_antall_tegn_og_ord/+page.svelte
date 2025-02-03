@@ -3,9 +3,9 @@
 	// Hvordan kan vi fikse slik at antall ord blir telt?
 </script>
 
-<textarea value={tekst}></textarea>
+<textarea bind:value={tekst}></textarea>
 <p>
-	Du har nå skrevet {tekst.length} tegn ord
+	Du har nå skrevet {tekst.length} tegn og {tekst.split(" ").length} ord
 </p>
 
 <style>

@@ -7,6 +7,6 @@
 <h1>Hvem var Norges første kvinnelig statsminister?</h1>
 <input bind:value={svar}>
 
-{#if svar === fasit}
+{#if svar.toLowerCase() === fasit.toLowerCase()}
 	<p>Det er helt riktig!</p>
 {/if}

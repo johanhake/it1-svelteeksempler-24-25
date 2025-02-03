@@ -14,7 +14,7 @@
 
 {#if tekst.length < maks}
 	<p>
-		Du har nå skrevet {tekst.length} tegn. Du har {maks} tegn
+		Du har nå skrevet {tekst.length} tegn. Du har {maks - tekst.length} tegn
 		igjen
 	</p>
 {:else}
