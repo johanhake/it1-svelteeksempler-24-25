@@ -29,20 +29,26 @@
 			},
 			{ nr: "5.4.7", navn: "Sammenligne tekster" },
 			{ nr: "5.4.8", navn: "Rik og eller berømt svelte" },
-		],[
-			{nr:"5.5.1", navn: "Telle antall tegn og ord"},
-			{nr:"5.5.2", navn: "Grense for antall tegn tilatt"},
-			{nr:"5.5.3", navn: "Sjekk svar fra Quiz"},
-			{nr:"5.5.4", navn: "Finn ordet i en tekst"},
-		],[
-			{nr:"5.6.1", navn: "Bytt ordet med en funksjon"},
-			{nr:"5.6.2", navn: "Bytt president i USA"},
-			{nr:"5.6.3", navn: "Øke verdi når vi klikker på en knapp"},
-			{nr:"5.6.4", navn: "Snurre en tekst rundt når vi klikker på en knapp"},
-			{nr:"5.6.5", navn: "Funksjon med to parameterer"},
-			{nr:"5.6.6", navn: "Endre navn med klikk på en knapp"},
-			{nr:"5.6.x", navn: "Andregradslikning"},
-		]
+		],
+		[
+			{ nr: "5.5.1", navn: "Telle antall tegn og ord" },
+			{ nr: "5.5.2", navn: "Grense for antall tegn tilatt" },
+			{ nr: "5.5.3", navn: "Sjekk svar fra Quiz" },
+			{ nr: "5.5.4", navn: "Finn ordet i en tekst" },
+		],
+		[
+			{ nr: "5.6.1", navn: "Bytt ordet med en funksjon" },
+			{ nr: "5.6.2", navn: "Bytt president i USA" },
+			{ nr: "5.6.3", navn: "Øke verdi når vi klikker på en knapp" },
+			{
+				nr: "5.6.4",
+				navn: "Snurre en tekst rundt når vi klikker på en knapp",
+			},
+			{ nr: "5.6.5", navn: "Funksjon med to parameterer" },
+			{ nr: "5.6.6", navn: "Endre navn med klikk på en knapp" },
+			{ nr: "5.6.x", navn: "Andregradslikning" },
+			{ nr: "5.6.x", navn: "Stein saks papir start" },
+		],
 	];
 
 	const oppgaver = [
@@ -69,7 +75,8 @@
 			{ nr: "5.16", navn: "Beregninger" },
 			{ nr: "5.18", navn: "Pig latin II" },
 			{ nr: "5.19", navn: "Vektorprodukt" },
-		],[
+		],
+		[
 			{ nr: "5.21", navn: "True eller false" },
 			{ nr: "5.22", navn: "Større enn" },
 			{ nr: "5.23", navn: "Kvakk" },
@@ -77,7 +84,12 @@
 			{ nr: "5.25", navn: "Grunnstoff" },
 			{ nr: "5.26", navn: "Minibank" },
 			{ nr: "5.27", navn: "Surt" },
-		],
+		],[
+			{ nr: "5.29", navn: "Gjennomsnitt" },
+			{ nr: "5.30", navn: "Rickrolled" },
+			{ nr: "5.32", navn: "Forbruk interaktiv" },
+			{ nr: "5.33", navn: "Tyngde" },
+		]
 	];
 
 	const antall_oppgaver =
@@ -128,7 +140,7 @@
 			style="height:{2.5 * (antall_oppgaver / eksempler.length)}em"
 		>
 			{#each oppgaver as underoppgaver, under_indeks}
-				<h4>Kapittel {under_indeks + 1}</h4>
+				<h4>Kapittel {5}.{under_indeks < 3 ? under_indeks + 1 : under_indeks===3 ? "4 - 5.5" : under_indeks + 2}</h4>
 				{#each underoppgaver as oppgave}
 					<a
 						href="/kapittel_5/oppgaver/oppgave_{oppgave.nr}_{oppgave.navn
