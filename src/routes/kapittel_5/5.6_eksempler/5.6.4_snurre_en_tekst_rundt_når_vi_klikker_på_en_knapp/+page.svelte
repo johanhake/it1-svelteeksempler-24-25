@@ -7,7 +7,7 @@
 
 <button on:click={snurr}>Snurr en runde</button>
 <!-- Bruk transform: rotate(Xturn) -->
-<p>
+<p style="transform: rotate({runder}turn)">
 	Nå har jeg snurret {runder} ganger
 </p>
 

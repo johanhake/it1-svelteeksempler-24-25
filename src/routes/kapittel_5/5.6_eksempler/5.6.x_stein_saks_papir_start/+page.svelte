@@ -41,6 +41,7 @@
 <style>
 	main{
 		background-color: #ebf0f1;
+		padding: 1em;
 	}
 	#bilder{
 		display: grid;

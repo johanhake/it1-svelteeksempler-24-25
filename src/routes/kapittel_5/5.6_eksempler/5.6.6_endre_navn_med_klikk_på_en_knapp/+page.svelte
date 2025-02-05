@@ -4,7 +4,6 @@
 	let navn = "John Donne"
 	const lag_nytt_navn = (fornavn, etternavn) => {
 		navn = fornavn + " " + etternavn
-
 	}
 </script>
 
@@ -16,9 +15,9 @@
 * Vi kan HELLER IKKE bare kalle funksjonen når vi skal registrere den
 * Vi må legge inn funksjonskallet i en annonym lytterfunksjon
 -->
-<button on:click={lag_nytt_navn("Marie", "Curie")}>
+<button on:click={()=>{lag_nytt_navn("Marie", "Curie")}}>
 		Marie Curie
 </button>
-<button on:click={lag_nytt_navn("James", "Bond")}>
+<button on:click={()=>{lag_nytt_navn("James", "Bond")}}>
 		James Bond
 </button>
