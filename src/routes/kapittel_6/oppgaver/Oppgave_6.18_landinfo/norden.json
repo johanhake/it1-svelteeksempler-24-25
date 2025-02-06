@@ -1,0 +1,18 @@
+[
+	{
+		"landsnavn": "Norge",
+		"hovedstad": "Oslo"
+	},{
+		"landsnavn": "Sverige",
+		"hovedstad": "Stockholm"
+	},{
+		"landsnavn": "Danmark",
+		"hovedstad": "København"
+	},{
+		"landsnavn": "Finland",
+		"hovedstad": "Helsingfors"
+	},{
+		"landsnavn": "Island",
+		"hovedstad": "Reykavik"
+	}
+]
