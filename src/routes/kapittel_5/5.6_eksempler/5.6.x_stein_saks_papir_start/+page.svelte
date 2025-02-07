@@ -53,7 +53,12 @@
 		width: 100%;
 		transition: 0.125s;
 	}
+
 	#bilder img:hover{
 		transform: scale(1.05)
+	}
+
+	#bilder img:active{
+		transform: scale(1.00)
 	}
 </style>
