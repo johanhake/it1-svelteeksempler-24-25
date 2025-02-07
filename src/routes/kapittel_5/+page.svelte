@@ -48,6 +48,7 @@
 			{ nr: "5.6.6", navn: "Endre navn med klikk på en knapp" },
 			{ nr: "5.6.x", navn: "Andregradslikning" },
 			{ nr: "5.6.x", navn: "Stein saks papir start" },
+			{ nr: "5.6.x", navn: "Stein saks papir" },
 		],
 	];
 
