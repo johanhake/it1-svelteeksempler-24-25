@@ -4,5 +4,5 @@
   </script>
 
   <!-- Bruk array join() til å lage mellomrom eller "," -->
-  <p>Skurkene er: {skurkene.join(" || ")}</p>
-  <p>Tallene er: {tallene}</p>
+  <p>Skurkene er: [{skurkene.join(" || ")}]</p>
+  <p>Tallene er: [{tallene.join(", ")}]</p>

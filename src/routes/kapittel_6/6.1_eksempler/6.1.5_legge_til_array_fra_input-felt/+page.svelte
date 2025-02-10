@@ -1,12 +1,17 @@
 <script>
 	// @ts-nocheck
 	
-		let elever = []
+		let elever = ["Leon"]
 		let navn = ""
+
 		  // Fjern navnet etter registrering
 		const registrer_elev = () => {
-			  elever.push(navn)
+			  //elever.push(navn)
+			  //elever = elever
+
+			  elever = [...elever, navn]
 			  console.log(elever)
+			  navn = ""
 		}
 	
 	  </script>
