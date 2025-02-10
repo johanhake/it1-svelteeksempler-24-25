@@ -6,12 +6,14 @@
 
 		  // Fjern navnet etter registrering
 		const registrer_elev = () => {
-			  //elever.push(navn)
-			  //elever = elever
+			//elever.push(navn)
+			//elever = elever
 
-			  elever = [...elever, navn]
-			  console.log(elever)
-			  navn = ""
+			// Bruker spread operator (...) for å fordele verdiene i listen 
+			// og så legge til en verdi på slutten
+			elever = [...elever, navn]
+			console.log(elever)
+			navn = ""
 		}
 	
 	  </script>
