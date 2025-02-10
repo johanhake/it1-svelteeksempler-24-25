@@ -115,7 +115,7 @@
 				<h4>Kapittel {6}.{under_indeks}</h4>
 				{#each underoppgaver as oppgave}
 					<a
-						href="/kapittel_6/oppgaver/oppgave_{oppgave.nr}_{oppgave.navn
+						href="/kapittel_6/oppgaver/Oppgave_{oppgave.nr}_{oppgave.navn
 							.toLowerCase()
 							.split(' ')
 							.join('_')}"
