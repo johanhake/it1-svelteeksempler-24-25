@@ -1,20 +1,20 @@
 <script>
-// @ts-nocheck
-
-	let elever = []
-	let navn = ""
-	  // Fjern navnet etter registrering
-	  // Svelte skjønner ikke at elever er oppdatert. Fiks det!
-	const registrerElev = () => {
-		  elever = [...elever, navn]
-		  navn = ""
-	}
-
-  </script>
-
-  <input bind:value={navn} on:change={registrerElev}>
-  <button on:click={registrerElev}>
-	  Registrer oppmøte
-  </button>
-  <h1>Elever som har kommet:</h1>
-  <p> {elever.join(" 👩‍🎓 ") } </p>
+	// @ts-nocheck
+	
+		let elever = []
+		let navn = ""
+		  // Fjern navnet etter registrering
+		const registrer_elev = () => {
+			  elever.push(navn)
+			  console.log(elever)
+		}
+	
+	  </script>
+	
+	  <input bind:value={navn}>
+	  <button on:click={registrer_elev}>
+		  Registrer oppmøte
+	  </button>
+	  <h1>Elever som har kommet:</h1>
+	  <p> {elever.join(" 👩‍🎓 ") } </p>
+	

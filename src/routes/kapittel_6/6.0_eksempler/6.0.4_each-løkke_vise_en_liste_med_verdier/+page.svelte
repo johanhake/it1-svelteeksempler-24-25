@@ -1,21 +1,26 @@
 <script>
-// @ts-nocheck
+	// @ts-nocheck
 
-	let utstyrsListe = []
-	let utstyr = ""
+	let utstyr_liste = [];
+	let utstyr = "";
 
-	const leggTilUtstyr = ()=>{
-		utstyrsListe=[...utstyrsListe, utstyr]
-		utstyr = ""
-	}
-
+	const legg_til_utstyr = () => {
+		utstyr_liste = [...utstyr_liste, utstyr];
+	};
 </script>
+
 <h2>Legg til utstyr i liste</h2>
-<label>Utstyr: <input type="text" bind:value={utstyr} on:change={leggTilUtstyr}></label>
+<label
+	>Utstyr: <input
+		type="text"
+		bind:value={utstyr}
+		on:change={legg_til_utstyr}
+	/></label
+>
 <ul>
 	<!-- Bruk en each - løkke til å vise en liste med utstyr -->
 	<!-- Viser indeks med en andre variabel -->
-	{#each utstyrsListe as utstyr, indeks}
-	<li>{indeks} : {utstyr}</li>
+	{#each utstyr_liste as utstyr, indeks}
+		<li>{indeks} : {utstyr}</li>
 	{/each}
 </ul>

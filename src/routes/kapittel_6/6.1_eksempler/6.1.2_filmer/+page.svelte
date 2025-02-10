@@ -1,7 +1,5 @@
 <script>
 	let filmer = ["Ben Hur", "Gandhi", "Gudfaren", "Hamlet", "Seven", "Saw"]
-	  filmer[3] = "Bat Man"
-   // Endrer verdi for fjerde filmen
 
   </script>
   <p> Antall filmer: {filmer.length} </p>

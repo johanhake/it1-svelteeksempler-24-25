@@ -9,7 +9,7 @@
 <label>a=<input type="number" bind:value={a}></label>
 <label>b=<input type="number" bind:value={b}></label>
 
-<h2>Gjennomsnitt av <em>{a}</em> og <em>{b}</em> er <em>{gjennomsnitt(a, b)}</em></h2>
+<h2>Gjennomsnitt av <e>{a}</e> og <e>{b}</e> er {gjennomsnitt(a, b)}</h2>
 
 <style>
     label{
