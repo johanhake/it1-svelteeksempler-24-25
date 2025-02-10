@@ -1,9 +1,9 @@
 <script>
 // @ts-nocheck
 
-	let partier = ["Ap", "SV", "Høyre", "V", "FrP", "Rødt", "Mgp", "Sp", "Krf"]
-	  let stemmer = [0,0,0,0,0,0,0,0,0]
-	  let leder = ""
+	let partier = $state(["Ap", "SV", "Høyre", "V", "FrP", "Rødt", "Mgp", "Sp", "Krf"])
+	  let stemmer = $state([0,0,0,0,0,0,0,0,0])
+	  let leder = $state("")
 
 	  // Lytter funksjon for det å registrere en stemme
 	  const registrerStemme = (parti)=>{
@@ -12,7 +12,7 @@
 	  }
 
 	  // Oppdatere det parti som har flest stemmer
-	  $:{
+	  $effect(()=>{
 		  leder = ""
 		  let flest = 0;
 		  for (let i=0; i<stemmer.length; i++){
@@ -21,13 +21,13 @@
 				  leder =  partier[i]
 			  }
 		  }
-	  }
+	  })
   </script>
   <h2>
 	  Registrer en stemme!
   </h2>
   {#each partier as parti}
-	  <button on:click={()=>{registrerStemme(parti)}}>
+	  <button onclick={()=>{registrerStemme(parti)}}>
 		  {parti}
 	  </button>
   {/each}
