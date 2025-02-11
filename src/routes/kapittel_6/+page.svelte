@@ -5,6 +5,7 @@
 			{ nr: "6.0.2", navn: "For-løkke Telle antall seksere" },
 			{ nr: "6.0.3", navn: "For-løkke Gå igjennom en array med verdier" },
 			{ nr: "6.0.4", navn: "Each-løkke Vise en liste med verdier" },
+			{nr:"6.0.5", navn: "Gangertabell"},
 		],
 		[
 			{ nr: "6.1.1", navn: "Skurker og tall" },
