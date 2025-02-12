@@ -6,6 +6,7 @@
 
 	const legg_til_utstyr = () => {
 		utstyr_liste = [...utstyr_liste, utstyr];
+		utstyr = ""
 	};
 </script>
 
@@ -19,8 +20,8 @@
 >
 <ul>
 	<!-- Bruk en each - løkke til å vise en liste med utstyr -->
-	<!-- Viser indeks med en andre variabel -->
+	<!-- Viser indeks med en andre variabel utstyr, indeks-->
 	{#each utstyr_liste as utstyr, indeks}
-		<li>{indeks} : {utstyr}</li>
+		<li>{indeks+1}:{utstyr}</li>
 	{/each}
 </ul>

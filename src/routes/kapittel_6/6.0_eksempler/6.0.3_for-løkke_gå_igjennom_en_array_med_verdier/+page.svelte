@@ -4,10 +4,13 @@
 	let tall_liste = [5, 10];
 	let tall = "";
 
-	let sum = 0;
-	for (let t of tall_liste) {
-		sum += t;
-	}
+	const gjennomsnitt = (liste) => {
+		let sum = 0;
+		for (let t of liste) {
+			sum += t;
+		}
+		return sum/liste.length
+	};
 
 	// Legger til "tall" i en list
 	const legg_til_tall = () => {
@@ -29,5 +32,5 @@
 	Listen: {tall_liste}
 </p>
 <p>
-	Gjennomsnitt: {sum / tall_liste.length}
+	Gjennomsnitt: {gjennomsnitt(tall_liste).toFixed(2)}
 </p>
