@@ -9,13 +9,14 @@
 
 	// 1) Hvordan få Svelte å skjønne vi endrer verdiene
 	const sorterAlfabetisk = () => {
-		sjokoladene.sort()
+		sjokoladene = sjokoladene.sort()
 	}
 
 	// 2) Bruk en sammenligningsfunksjon som sammenligner to verdier til å sortere: (a, b)=>{...}
 	// Hint: Denne skal returnere noe negativ hvis a er større enn b
 	const sorterOmvendt = () => {
-		sjokoladene.sort((a,b)=>{
+		sjokoladene = sjokoladene.sort(
+			(a,b)=>{
 			if (a>b){
 				return -1
 			}else if (a<b){
@@ -23,7 +24,8 @@
 			}else{
 				return 0
 			}
-		})
+		}
+		)
 	}
 </script>
 
