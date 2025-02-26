@@ -16,14 +16,13 @@
 		skurker.push({ navn: skurkNavn, fiende: fiendeNavn });
 		skurkNavn = "";
 		fiendeNavn = "";
-		skurker = skurker
 	};
 </script>
 
 <h1>Skurker</h1>
 
-<label>Skurk</label><input type="text" bind:value={skurkNavn} />
-<label>Fiende</label><input type="text" bind:value={fiendeNavn} />
+<label>Skurk<input type="text" bind:value={skurkNavn} /></label>
+<label>Fiende<input type="text" bind:value={fiendeNavn} /></label>
 <button on:click={leggTilSkurk}>Registrere</button>
 
 {#each skurker as skurk}
