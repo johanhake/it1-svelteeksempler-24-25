@@ -16,6 +16,9 @@
 			{ nr: "6.1.6", navn: "Legge til array fra checkboxer" },
 			{ nr: "6.1.8", navn: "Sortere en array med tekst" },
 			{ nr: "6.1.9", navn: "Sortere en array med tall" },
+			{ nr: "6.1.10", navn: "Array metode map" },
+			{ nr: "6.1.11", navn: "Array metode filter" },
+			{ nr: "6.1.12", navn: "Array metode reduce" },
 		],
 		[
 			{ nr: "6.2.1", navn: "Endre verdi til objekt" },
