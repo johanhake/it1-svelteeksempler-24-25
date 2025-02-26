@@ -1,21 +1,27 @@
 <script>
 	let skurker_liste = [
-	  ["Pingvinen", "Lynvingen"],
-	  ["B-Gjengen", "Onkel Skrue"],
-	  ["Lex Luthor", "Supermann"]
-	]
+		["Pingvinen", "Lynvingen"],
+		["B-Gjengen", "Onkel Skrue"],
+		["Lex Luthor", "Supermann"],
+	];
 
 	let skurker_obj = [
-	  {navn: "Pingvinen", fiende: "Lynvingen"},
-	  {navn: "B-Gjengen", fiende: "Onkel Skrue"},
-	  {navn: "Lex Luthor", fiende: "Supermann"}
-	]
+		{ navn: "Pingvinen", fiende: "Lynvingen" },
+		{ navn: "B-Gjengen", fiende: "Onkel Skrue" },
+		{ navn: "Lex Luthor", fiende: "Supermann" },
+	];
+</script>
 
-  </script>
-
-  {#each skurker_liste as skurk}
+{#each skurker_liste as skurk}
 	<article>
-	  <h1>{skurk}</h1>
-	  <p>Fiende: {skurk}</p>
+		<h1>{skurk[0]}</h1>
+		<p>Fiende: {skurk[1]}</p>
 	</article>
-  {/each}
+{/each}
+
+{#each skurker_obj as skurk}
+	<article>
+		<h1>{skurk.navn}</h1>
+		<p>Fiende: {skurk.fiende}</p>
+	</article>
+{/each}

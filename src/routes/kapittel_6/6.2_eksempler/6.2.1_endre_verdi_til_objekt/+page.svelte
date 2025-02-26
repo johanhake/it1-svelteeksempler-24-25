@@ -12,9 +12,10 @@
 
 </script>
 
+<!-- Bruker både indeks-notasjon og prikk-notasjon -->
+<p> {skurk.navn} er <b>{skurk["nasjonalitet"]}</b></p>
+
 <button on:click={ () => {endreNasjonalitet("norsk")} }>norsk</button>
 <button on:click={ () => {endreNasjonalitet("svensk")} }>svensk</button>
 <button on:click={ () => {endreNasjonalitet("dansk")} }>dansk</button>
 
-<!-- Bruker både indeks-notasjon og prikk-notasjon -->
-<p> {skurk} er <b>{skurk}</b></p>
