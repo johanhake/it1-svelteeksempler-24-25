@@ -8,7 +8,7 @@
 
 	  let genre = $state("Komedie")
 
-	let skrekkfilmer = $derived(filmene.filter(film => film.genre === genre))
+	let skrekkfilmer = $derived(filmene)
   </script>
 
   <select bind:value={genre}>

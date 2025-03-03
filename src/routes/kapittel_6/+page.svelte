@@ -48,6 +48,7 @@
 		[
 			{ nr: "6.10", navn: "Sortere meny" },
 			{ nr: "6.12", navn: "Fotballtabell" },
+			{ nr: "6.13", navn: "Registrere fravær elever start" },
 			{ nr: "6.13", navn: "Registrere fravær elever checkbox" },
 			{ nr: "6.13", navn: "Registrere fravær elever" },
 			{ nr: "6.13", navn: "Registrere fravær elever json" },
@@ -108,7 +109,7 @@
 			vis_oppgaver = !vis_oppgaver;
 		}}
 		title="Vis løsningsforslag"
-		><h1>Løsningsforslag oppgaver fra kap 5</h1></button
+		><h1>Løsningsforslag oppgaver fra kap 6</h1></button
 	>
 	{#if vis_oppgaver}
 		<div

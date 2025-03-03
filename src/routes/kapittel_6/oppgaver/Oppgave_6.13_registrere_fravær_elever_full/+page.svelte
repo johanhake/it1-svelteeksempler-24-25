@@ -1,209 +1,41 @@
 <script>
 // @ts-nocheck
 
-	let elever = [
-	{
-		fornavn: "Kristian",
-		etternavn: "Bakken",
-		kjønn: "M",
-		klasse: "2STA"
-	},
-	{
-		fornavn: "Thomas",
-		etternavn: "Berg",
-		kjønn: "M",
-		klasse: "2STA"
-	},
-	{
-		fornavn: "Cato",
-		etternavn: "Havig",
-		kjønn: "M",
-		klasse: "2STA"
-	},
-	{
-		fornavn: "Martin",
-		etternavn: "Klausen",
-		kjønn: "M",
-		klasse: "2STA"
-	},
-	{
-		fornavn: "Lukas",
-		etternavn: "Sørbu",
-		kjønn: "M",
-		klasse: "2STA"
-	},
-	{
-		fornavn: "William",
-		etternavn: "Feren",
-		kjønn: "M",
-		klasse: "2STB"
-	},
-	{
-		fornavn: "Sander",
-		etternavn: "Notstad",
-		kjønn: "M",
-		klasse: "2STB"
-	},
-	{
-		fornavn: "Tobias",
-		etternavn: "Rian",
-		kjønn: "M",
-		klasse: "2STC"
-	},
-	{
-		fornavn: "Abdallah",
-		etternavn: "Minta",
-		kjønn: "M",
-		klasse: "2STD"
-	},
-	{
-		fornavn: "Linus",
-		etternavn: "Dragland",
-		kjønn: "M",
-		klasse: "2STE"
-	},
-	{
-		fornavn: "Marthe",
-		etternavn: "Asbjørnsen",
-		kjønn: "F",
-		klasse: "2STF"
-	},
-	{
-		fornavn: "Aksel ",
-		etternavn: "Banelind",
-		kjønn: "M",
-		klasse: "2STF"
-	},
-	{
-		fornavn: "Herman",
-		etternavn: "Ly",
-		kjønn: "M",
-		klasse: "2STF"
-	},
-	{
-		fornavn: "Tristan",
-		etternavn: "Mietle",
-		kjønn: "M",
-		klasse: "2STF"
-	},
-	{
-		fornavn: "Gurveer",
-		etternavn: "Singh",
-		kjønn: "M",
-		klasse: "2STF"
-	},
-	{
-		fornavn: "Mats",
-		etternavn: "Ekeberg",
-		kjønn: "M",
-		klasse: "3STA"
-	},
-	{
-		fornavn: "Mathias",
-		etternavn: "Hestnes",
-		kjønn: "M",
-		klasse: "3STA"
-	},
-	{
-		fornavn: "Erik",
-		etternavn: "Huse",
-		kjønn: "M",
-		klasse: "3STA"
-	},
-	{
-		fornavn: "Thien",
-		etternavn: "Nguyen",
-		kjønn: "M",
-		klasse: "3STA"
-	},
-	{
-		fornavn: "Mathias",
-		etternavn: "Schiøtz",
-		kjønn: "M",
-		klasse: "3STB"
-	},
-	{
-		fornavn: "Andreas",
-		etternavn: "Skancke",
-		kjønn: "M",
-		klasse: "3STB"
-	},
-	{
-		fornavn: "Lukas",
-		etternavn: "Veidahl",
-		kjønn: "M",
-		klasse: "3STB"
-	},
-	{
-		fornavn: "Kamilla",
-		etternavn: "Haukås",
-		kjønn: "F",
-		klasse: "3STD"
-	},
-	{
-		fornavn: "Erika",
-		etternavn: "Iden",
-		kjønn: "F",
-		klasse: "3STD"
-	},
-	{
-		fornavn: "Hallvard",
-		etternavn: "Langen",
-		kjønn: "M",
-		klasse: "3STD"
-	},
-	{
-		fornavn: "Johan",
-		etternavn: "Salim",
-		kjønn: "M",
-		klasse: "3STD"
-	},
-	{
-		fornavn: "Emilie Sophie",
-		etternavn: "Skjelstad",
-		kjønn: "F",
-		klasse: "3STD"
-	},
-	{
-		fornavn: "Jonas",
-		etternavn: "Sørli",
-		kjønn: "M",
-		klasse: "3STE"
-	},
-	{
-		fornavn: "Jonathan",
-		etternavn: "Gjefsen",
-		kjønn: "M",
-		klasse: "3STF"
-	},
-	{
-		fornavn: "Nicolay",
-		etternavn: "Schiøtz-n",
-		kjønn: "M",
-		klasse: "3STF"
-	},
-	{
-		fornavn: "Elias",
-		etternavn: "Westad",
-		kjønn: "M",
-		klasse: "3STF"
-	}
-]
+let elever = $state([
+		{ fornavn: "Abbas", etternavn: "Ahmadi", klasse: "2STE" },
+		{ fornavn: "Abdalla", etternavn: "Mohamed-Sharif", klasse: "2STB" },
+		{ fornavn: "Ahad", etternavn: "Sajid", klasse: "2STB" },
+		{ fornavn: "Ali", etternavn: "Gondal", klasse: "3STE" },
+		{ fornavn: "Arsam", etternavn: "Nasar", klasse: "2STB" },
+		{ fornavn: "Birk", etternavn: "Eilertsen", klasse: "3STB" },
+		{ fornavn: "Henry", etternavn: "Tran", klasse: "2STE" },
+		{ fornavn: "Leon", etternavn: "Almli", klasse: "3STE" },
+		{ fornavn: "Margrethe", etternavn: "Gøthesen", klasse: "2STC" },
+		{ fornavn: "Martin", etternavn: "Farahi", klasse: "3STA" },
+		{ fornavn: "Martin", etternavn: "Larsen", klasse: "2STC" },
+		{ fornavn: "Philip", etternavn: "Schytt", klasse: "2STD" },
+		{ fornavn: "Rehman", etternavn: "Shah", klasse: "2STB" },
+		{ fornavn: "Sergei", etternavn: "Titov", klasse: "3STE" },
+		{ fornavn: "Simen", etternavn: "Mathiesen", klasse: "3STB" },
+		{ fornavn: "Sondre", etternavn: "Arnesen", klasse: "3STC" },
+		{ fornavn: "Tymofii", etternavn: "Chernata", klasse: "3STE" },
+	])
+	
 	// Setter alle elever til å være tilstede
 	for (let elev of elever){
 		elev.tilstede = true
 	}
 
 	// Variabel for å vise eller ikke vise bildene
-	let viseBilder = false;
+	let viseBilder = $state(false);
 
 	// Variabler brukt for å søke
-	let søkHva = ""
-	let søkTekst = ""
-	$:ikkeSøking = søkHva === "" || søkTekst === ""
+	let søkHva = $state("")
+	let søkTekst = $state("")
+	let ikkeSøking = $derived(søkHva === "" || søkTekst === "")
 
 	// Reaktiv variabel som teller antall tilstede
-	$: tilstede = elever.filter(a=>a.tilstede).length
+	let tilstede = $derived(elever.filter(a=>a.tilstede).length)
 
 	// Lytterfunksjon for å registrere tilstedeværelese for elev
 	const byttTilstede = (elev)=>{
@@ -215,14 +47,12 @@
 	const sorter = (hva) =>{
 		// Sortere hva etter stigende rekkefølge
 		if (stigende[hva]){
-			elever.sort((a,b)=>a[hva].localeCompare(b[hva]))
+			elever = elever.sort((a,b)=>a[hva].localeCompare(b[hva]))
 		}else{
-			elever.sort((a,b)=>b[hva].localeCompare(a[hva]))
+			elever = elever.sort((a,b)=>b[hva].localeCompare(a[hva]))
 		}
 		stigende[hva] = !stigende[hva]
 
-		// Trigge oppdatering av tabellen
-		elever = elever
 	}
 
 	// Objekt for å holde hvilken vei vi skal sortere
@@ -237,7 +67,7 @@
 		Informasjonsteknologi 1
 	</h2>
 	<h3>Lærer: Johan Hake</h3>
-	<img src="/klassebilder/hake.jpg" alt="Hake">
+	<img class="bilde" src="/klassebilder/Johan_Hake.jpg" alt="Hake">
 	<h3>Tilstede: {tilstede} elever</h3>
 	<label><input type="checkbox" bind:checked={viseBilder}>Vise bilder</label><br>
 	<label for="">
@@ -268,7 +98,7 @@
 					<td class={elev.tilstede ? "tilstede" : ""}>{elev.etternavn}</td>
 					<td class="klasse {elev.tilstede ? "tilstede" : ""}">{elev.klasse}</td>
 					{#if viseBilder}
-						<td class="bilde"><img class={!elev.tilstede ? "bilde-ikke-tilstede": ""} src="/klassebilder/{elev.etternavn.toLowerCase()}.jpg" alt=""></td>
+						<td class="bilde"><img class={!elev.tilstede ? "bilde-ikke-tilstede": ""} src="/klassebilder/{elev.fornavn}_{elev.etternavn}.png" alt=""></td>
 					{/if}
 				</tr>
 				{/if}

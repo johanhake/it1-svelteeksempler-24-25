@@ -5,8 +5,8 @@
 		{ navn: "Lex Luthor", fiende: "Supermann" },
 	];
 
-	skurker.push({ navn: "Thanos", fiende: "Avengers" });
-	skurker.push({ navn: "Voldemort", fiende: "Harry Potter" });
+	//skurker.push({ navn: "Thanos", fiende: "Avengers" });
+	//skurker.push({ navn: "Voldemort", fiende: "Harry Potter" });
 
 	let skurkNavn = "";
 	let fiendeNavn = "";

@@ -5,7 +5,7 @@
 	import const_elever from "./elever.json"
 
 	// Data importert fra json er const og kan IKKE endres på
-	let elever = const_elever;
+	let elever = $state(const_elever);
 
 	// Setter alle elever til å være tilstede
 	for (let elev of elever){
@@ -13,7 +13,7 @@
 	}
 
 	// Reaktiv variabel som teller antall tilstede
-	$: tilstede = elever.filter(a=>a.tilstede).length
+	let tilstede = $derived(elever.filter(a=>a.tilstede).length)
 
 	// Lytterfunksjon for å registrere tilstedeværelese for elev
 	const byttTilstede = (elev)=>{

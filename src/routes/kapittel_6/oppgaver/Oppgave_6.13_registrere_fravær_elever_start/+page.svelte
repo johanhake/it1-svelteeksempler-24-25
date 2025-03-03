@@ -1,7 +1,7 @@
 <script>
 	// @ts-nocheck
 
-	let elever = $state([
+	let elever = [
 		{ fornavn: "Abbas", etternavn: "Ahmadi", klasse: "2STE" },
 		{ fornavn: "Abdalla", etternavn: "Mohamed-Sharif", klasse: "2STB" },
 		{ fornavn: "Ahad", etternavn: "Sajid", klasse: "2STB" },
@@ -19,7 +19,7 @@
 		{ fornavn: "Simen", etternavn: "Mathiesen", klasse: "3STB" },
 		{ fornavn: "Sondre", etternavn: "Arnesen", klasse: "3STC" },
 		{ fornavn: "Tymofii", etternavn: "Chernata", klasse: "3STE" },
-	])
+	]
 
 	// Setter alle elever til å være tilstede
 	for (let elev of elever) {
@@ -27,12 +27,12 @@
 	}
 
 	// Reaktiv variabel som teller antall tilstede
-	let tilstede = $derived(elever.filter((a) => a.tilstede).length)
+	let tilstede = elever.filter((a) => a.tilstede)
 
-	// Lytterfunksjon for å registrere tilstedeværelese for elev
+	// Lytterfunksjon for å endre tilstedeværelese for elev
 	const byttTilstede = (elev) => {
-		elev.tilstede = !elev.tilstede;
-		elever = elever;
+		// hvordan endrer vi verdien til tilstede for elev?
+		
 	}
 	
 </script>
@@ -51,9 +51,11 @@
 		{#each elever as elev}
 			<tr
 				on:click={() => {
-					byttTilstede(elev);
+					// Hva skal stå her for at tilstede hos eleven skal endres?
 				}}
 			>
+			    <!-- Hvilken verdi for attributten class når en elev er tilstede? -->
+			    <!-- Hva gjør det med utseendet til raden? -->
 				<td class={elev.tilstede ? "tilstede" : ""}>{elev.fornavn}</td>
 				<td class={elev.tilstede ? "tilstede" : ""}>{elev.etternavn}</td
 				>
