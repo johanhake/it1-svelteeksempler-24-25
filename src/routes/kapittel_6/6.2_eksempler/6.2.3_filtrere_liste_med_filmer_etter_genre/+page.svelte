@@ -3,12 +3,17 @@
 	  {tittel: "The Shining", genre: "Skrekk"},
 	  {tittel: "Alien", genre: "Skrekk"},
 	  {tittel: "Hot Shots", genre: "Komedie"},
+	  {tittel: "Hot Shots II", genre: "Komedie"},
+	  {tittel: "Aliens", genre: "Skrekk"},
 	  {tittel: "Panserkrysseren Potemkin", genre: "Drama"}
 	])
 
 	  let genre = $state("Komedie")
 
-	let skrekkfilmer = $derived(filmene)
+	let filtrerte_filmer = $derived(filmene.filter(
+		(element)=>{
+			return element.genre === genre
+		}))
   </script>
 
   <select bind:value={genre}>
@@ -18,7 +23,7 @@
   </select>
 
   <ul>
-	{#each skrekkfilmer as film}
+	{#each filtrerte_filmer as film}
 	  <li>{film.tittel}</li>
 	{/each}
   </ul>

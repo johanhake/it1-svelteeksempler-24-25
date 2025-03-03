@@ -10,6 +10,10 @@
 		{ navn: "B-Gjengen", fiende: "Onkel Skrue" },
 		{ navn: "Lex Luthor", fiende: "Supermann" },
 	];
+
+	// Sorter etter navn
+	skurker_obj.sort((a, b)=>a.navn.localeCompare(b.navn))
+
 </script>
 
 {#each skurker_liste as skurk}

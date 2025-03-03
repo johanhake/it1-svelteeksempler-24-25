@@ -23,11 +23,11 @@
 
 	// Setter alle elever til å være tilstede
 	for (let elev of elever) {
-		elev.tilstede = true
+		elev.tilstede = Math.random() < 0.75
 	}
 
 	// Reaktiv variabel som teller antall tilstede
-	let tilstede = elever.filter((a) => a.tilstede)
+	let antall_tilstede = elever.filter((a) => a.tilstede).length
 
 	// Lytterfunksjon for å endre tilstedeværelese for elev
 	const byttTilstede = (elev) => {
@@ -38,7 +38,7 @@
 </script>
 
 <h2>Informasjonsteknologi 1</h2>
-<h3>Tilstede: {tilstede} elever</h3>
+<h3>Tilstede: {antall_tilstede} elever</h3>
 <table>
 	<thead>
 		<tr>
@@ -57,11 +57,8 @@
 			    <!-- Hvilken verdi for attributten class når en elev er tilstede? -->
 			    <!-- Hva gjør det med utseendet til raden? -->
 				<td class={elev.tilstede ? "tilstede" : ""}>{elev.fornavn}</td>
-				<td class={elev.tilstede ? "tilstede" : ""}>{elev.etternavn}</td
-				>
-				<td class="klasse {elev.tilstede ? 'tilstede' : ''}"
-					>{elev.klasse}</td
-				>
+				<td class={elev.tilstede ? "tilstede" : ""}>{elev.etternavn}</td>
+				<td class="klasse {elev.tilstede ? 'tilstede' : ''}">{elev.klasse}</td>
 			</tr>
 		{/each}
 	</tbody>

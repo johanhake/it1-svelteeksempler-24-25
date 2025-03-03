@@ -5,17 +5,20 @@
 		{ navn: "Lex Luthor", fiende: "Supermann" },
 	];
 
-	//skurker.push({ navn: "Thanos", fiende: "Avengers" });
-	//skurker.push({ navn: "Voldemort", fiende: "Harry Potter" });
+	skurker.push({ navn: "Thanos", fiende: "Avengers" });
+	skurker = [...skurker, { navn: "Voldemort", fiende: "Harry Potter" }];
 
 	let skurkNavn = "";
 	let fiendeNavn = "";
 
 	// Lytterfunksjon for å legge til skurk
 	const leggTilSkurk = () => {
-		skurker.push({ navn: skurkNavn, fiende: fiendeNavn });
-		skurkNavn = "";
-		fiendeNavn = "";
+		//if (!(skurkNavn === "" || fiendeNavn === "")) {
+		if (skurkNavn !== "" && fiendeNavn !== "") {
+				skurker = [...skurker, { navn: skurkNavn, fiende: fiendeNavn }];
+			skurkNavn = "";
+			fiendeNavn = "";
+		}
 	};
 </script>
 
