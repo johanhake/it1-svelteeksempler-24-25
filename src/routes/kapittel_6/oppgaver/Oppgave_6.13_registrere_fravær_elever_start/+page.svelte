@@ -21,7 +21,7 @@
 		{ fornavn: "Tymofii", etternavn: "Chernata", klasse: "3STE" },
 	]
 
-	// Setter alle elever til å være tilstede
+	// Setter cirka 75% av elevene til å være tilstede
 	for (let elev of elever) {
 		elev.tilstede = Math.random() < 0.75
 	}
