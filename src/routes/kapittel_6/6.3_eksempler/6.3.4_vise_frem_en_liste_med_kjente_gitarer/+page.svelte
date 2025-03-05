@@ -1,13 +1,21 @@
 <script>
 // @ts-nocheck
 
-	import gitarer from "./gitarer.json"
+	import abdalla from "./gitarer.json"
+	let merke = "Gibson"
 
 </script>
 
-<h1>{gitarer.tittel}</h1>
+<h1>{abdalla.tittel}</h1>
+<select bind:value={merke}>
+	<option value="Gibson">Gibson</option>
+	<option value="Fender">Fender</option>
+</select>
+
 <ul>
-	{#each gitarer.gitarer as g}
-	<li>{g.merke} : {g.modell}</li>
+	{#each abdalla.gitarer as henry}
+	{#if henry.merke === merke}
+	<li>{henry.merke} : {henry.modell}</li>
+	{/if}
 	{/each}
 </ul>
