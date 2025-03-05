@@ -56,11 +56,11 @@ let elever = $state([
 	}
 
 	// Objekt for å holde hvilken vei vi skal sortere
-	let stigende = {
+	let stigende = $state({
 		fornavn: true,
 		etternavn: true,
 		klasse: true
-	}
+	})
 
 	</script>
 	<h2>
