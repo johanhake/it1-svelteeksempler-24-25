@@ -1,6 +1,7 @@
 <script>
 // @ts-nocheck
 
+	// Variabelnavnet er abdalla, mest for å forvirre dere!
 	import abdalla from "./gitarer.json"
 	let merke = "Gibson"
 
@@ -13,6 +14,7 @@
 </select>
 
 <ul>
+	<!-- Tellevariablen heter henry også for å forvirre dere! -->
 	{#each abdalla.gitarer as henry}
 	{#if henry.merke === merke}
 	<li>{henry.merke} : {henry.modell}</li>
