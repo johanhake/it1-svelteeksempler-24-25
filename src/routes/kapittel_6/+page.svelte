@@ -19,6 +19,7 @@
 			{ nr: "6.1.10", navn: "Array metode map" },
 			{ nr: "6.1.11", navn: "Array metode filter" },
 			{ nr: "6.1.12", navn: "Array metode reduce" },
+			{ nr: "6.1.13", navn: "Hils-oppgave øving" },
 		],
 		[
 			{ nr: "6.2.1", navn: "Endre verdi til objekt" },
@@ -29,6 +30,7 @@
 		[
 			{ nr: "6.3.2", navn: "Lese inn data fra en JSON-fil" },
 			{ nr: "6.3.4", navn: "Vise frem en liste med kjente gitarer" },
+			{ nr: "6.3.5", navn: "Land-oppgave øving" },
 		],
 		[
 			{ nr: "6.4.2", navn: "Chuck Norris vitser" },
