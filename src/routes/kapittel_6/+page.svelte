@@ -62,6 +62,7 @@
 			{ nr: "6.16", navn: "Alfabetet" },
 			{ nr: "6.17", navn: "Brukernavn" },
 			{ nr: "6.18", navn: "Landinfo" },
+			{ nr: "6.22a", navn: "Kortstokk" },
 			{ nr: "6.23", navn: "MovieDB" },
 		],
 		[

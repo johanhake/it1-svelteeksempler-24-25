@@ -4,9 +4,9 @@
 	let joke
 	const getJoke = async () => {
 		joke = ""
-		const data = await fetch("https://api.chucknorris.io/jokes/random?category=food")
+		const data = await fetch("https://api.chucknorris.io/jokes/random")
 		const json = await data.json()
-		joke = json.value
+		joke = json
 	}
 	getJoke()
 </script>

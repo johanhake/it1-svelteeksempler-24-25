@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-	let emojis = []
+	let emojis = $state([])
 	let infotekst = "Laster inn emojier..."
 
 	const getEmojis = async () => {
@@ -10,10 +10,10 @@
 	}
 	getEmojis()
 
-	let q = ""
-	$:filtrerte = emojis.filter( emoji => true)
+	let q = $state("")
+	let filtrerte = $derived(emojis.filter( (emoji) => {return true}))
 
-	let tekst = ""
+	let tekst = $state("")
 
 	const insert = (nyEmoji) => {
 		tekst += nyEmoji
@@ -25,7 +25,7 @@
 
 <section>
 	{#each filtrerte as emoji}
-		<button on:click={()=>{insert(emoji.emoji)}}>
+		<button onclick={()=>{insert(emoji)}}>
 			<h1>{emoji.emoji}</h1>
 			<p>{emoji.description}</p>
 		</button>

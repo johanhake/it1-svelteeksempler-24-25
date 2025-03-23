@@ -1,49 +1,69 @@
 <script>
-// @ts-nocheck
+	// @ts-nocheck
 
-	import varer from "./nettbutikk.json";
+	import json from "./nettbutikk.json";
+
+	//
+	let varer = $state(json);
 
 	// Legger inn antall i hvert vare-objekt
-	for (let vare of varer){
-		vare.antall = 0
+	for (let vare of varer) {
+		vare.antall = 0;
 	}
 
 	// Handlekurv
-	let handlekurv = []
+	let handlekurv = $state([]);
+
+	const beregnTotalPris = (handlekurv) => {
+		let sum = 0;
+		for (let vare of handlekurv) {
+			sum += vare.pris * vare.antall;
+		}
+		console.log("totalPris", sum);
+		return sum;
+	};
 
 	// Variabel for total pris av varer i handlekurven
-	let totalPris = 0;
+	let totalPris = $derived(beregnTotalPris(handlekurv));
 
 	// Variabel for visning av pris
-	let visMaksPris = 2600;
+	let visMaksPris = $state(1000);
 
 	// Viser handlekurven
-	let viserKurv = false;
+	let viserKurv = $state(false);
 
 	// Variabel for hvilket plagg som skal vises
-	let visPlagg = "alle";
+	let visPlagg = $state("alle");
 
 	// Viser handlekurven
 	const visKurv = () => {
-		console.log("vis kurv");
 		viserKurv = !viserKurv;
+		console.log("vis kurv", viserKurv);
 	};
 
 	// Tømmer handlekurven
 	const tomKurv = () => {
 		console.log("tøm handlekurv");
+		handlekurv = [];
 	};
 
 	// Sletter en vare med gitt indeks
 	const slettVare = (indeks) => {
-		console.log("sletter: ", handlekurv[indeks].navn)
-	}
+		console.log("sletter: ", handlekurv[indeks].navn);
+		handlekurv.splice(indeks, 1);
+		handlekurv = handlekurv;
+	};
 
 	// Legger i handlekurv
 	const leggIHandlekurv = (vare) => {
-		console.log("Legger", vare.navn, "i handlekurv", vare.antall)
-	}
-
+		console.log("Legger", vare.navn, "i handlekurv", vare.antall);
+		handlekurv = [
+			...handlekurv,
+			{ navn: vare.navn, pris: vare.pris, antall: vare.antall },
+		];
+		vare.antall = 0;
+		varer = varer;
+	};
 </script>
 
 <link
@@ -57,10 +77,20 @@
 			<option value="skjorte">Vis Skjorter</option>
 			<option value="bukse">Vis Bukser</option>
 		</select>
-		<button class="button success" class:filter={viserKurv} on:click={visKurv}>Handlekurv</button>
-		<button class="button warning" on:click={tomKurv}>Tøm handlekurv</button>
+		<button
+			class="button success"
+			class:filter={viserKurv}
+			onclick={visKurv}>Handlekurv</button
+		>
+		<button class="button warning" onclick={tomKurv}>Tøm handlekurv</button>
 		<label>
-			<input type="range" min="100" max="2600" step="100" bind:value={visMaksPris}>
+			<input
+				type="range"
+				min="100"
+				max="1000"
+				step="100"
+				bind:value={visMaksPris}
+			/>
 			{visMaksPris} kr
 		</label>
 	</nav>
@@ -70,9 +100,14 @@
 		<h3>Handlekurv</h3>
 		<!-- Går igjennom alle varene i handlekurven -->
 		{#each handlekurv as kurv, indeks}
-			<button class="slett" on:click={()=>{slettVare(indeks)}}>×</button>
+			<button
+				class="slett"
+				onclick={() => {
+					slettVare(indeks);
+				}}>×</button
+			>
 			<article>{kurv.antall} x {kurv.navn}</article>
-			<article>{kurv.pris*kurv.antall} kr</article>
+			<article>{kurv.pris * kurv.antall} kr</article>
 		{/each}
 		<article></article>
 		<article><b>Total pris:</b></article>
@@ -82,19 +117,28 @@
 	<main>
 		<!-- Går igjennom alle varene i listen varer-->
 		{#each varer as vare, indeks}
-			<article>
-				<img src="/butikkbilder/{vare.bilde}" alt="" />
-				<h6>{vare.type} {vare.navn} <i>{vare.pris} kr</i></h6>
-				<input type="number" bind:value={vare.antall} min="0" />
-				<button class="button" on:click={()=>{leggIHandlekurv(vare)}}>Legg i Handlekurv</button>
-			</article>
+			{#if vare.pris <= visMaksPris && (visPlagg === "alle" || visPlagg === vare.plagg)}
+				<article>
+					<a href="/prosjekt/nettbutikk/enkeltvare?vare={indeks}">
+						<img src="/butikkbilder/{vare.bilde}" alt="" />
+						<h6>{vare.type} {vare.navn} <i>{vare.pris} kr</i></h6>
+					</a>
+
+					<input type="number" bind:value={vare.antall} min="0" />
+					<button
+						class="button"
+						onclick={() => {
+							leggIHandlekurv(vare);
+						}}>Legg i Handlekurv</button
+					>
+				</article>
+			{/if}
 		{/each}
 	</main>
 {/if}
 
 <style>
-
-	.filter{
+	.filter {
 		opacity: 0.5;
 	}
 
@@ -145,23 +189,21 @@
 		width: 400px;
 	}
 
-	.slett{
+	.slett {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-size: 1.2em;
-		cursor:pointer;
+		cursor: pointer;
 	}
 
-	.slett:hover{
+	.slett:hover {
 		color: red;
 	}
 
-	.slett:active{
+	.slett:active {
 		color: darkred;
 	}
-
-
 
 	#txtHandlekurv h3 {
 		grid-column: span 3;
