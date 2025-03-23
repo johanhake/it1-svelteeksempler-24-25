@@ -3,7 +3,7 @@
 	import { teller } from '../stores_oppgaver'
 
 const minekVerdi = ()=>{
-	teller.set($teller+1)
+	teller.set($teller-1)
 }
 </script>
 
