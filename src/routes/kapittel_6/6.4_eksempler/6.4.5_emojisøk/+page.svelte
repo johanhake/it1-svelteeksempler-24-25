@@ -11,12 +11,12 @@
 	getEmojis()
 
 	let q = $state("")
-	let filtrerte = $derived(emojis.filter( (emoji) => {return true}))
+	let filtrerte = $derived(emojis.filter((emoji) => emoji.description.includes(q)))
 
 	let tekst = $state("")
 
 	const insert = (nyEmoji) => {
-		tekst += nyEmoji
+		tekst += nyEmoji.emoji
 	}
 </script>
 
