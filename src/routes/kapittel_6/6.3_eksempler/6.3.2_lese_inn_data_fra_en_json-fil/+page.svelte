@@ -11,7 +11,7 @@
 </script>
 
 {#if person}
-	<p>Navn: {person.navn}</p>
+	<p>Navn: {person.navn	}</p>
 	<p>Alder: {person.alder}</p>
 {:else}
 	<p>Henter data...</p>

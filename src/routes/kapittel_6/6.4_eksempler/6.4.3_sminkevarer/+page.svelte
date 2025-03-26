@@ -5,7 +5,7 @@
 	let produkter = [];
 	let merke = 'revlon';
 	let unikeTall = new Set([3,4,5,4,3,2,5,6])
-	let unikeMerker = new Set(varer.map(a=>a.brand))
+	let unikeMerker = new Set(varer.map(a=>a.brand).sort())
 
 	// Vi kan nå fortsette å lage en nedtreksmeny for merker!
 	console.log(unikeMerker)
@@ -22,6 +22,11 @@
 
 <nav>
 	<label>Vis produktene til:
+		<select bind:value={merke}>
+			{#each unikeMerker as m}
+				<option value={m}>{m}</option>
+			{/each}
+		</select>
 	<input bind:value={merke}></label>
 	<button on:click={getProdukter}>OK</button>
 </nav>

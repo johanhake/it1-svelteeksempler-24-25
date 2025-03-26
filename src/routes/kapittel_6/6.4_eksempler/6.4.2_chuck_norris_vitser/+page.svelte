@@ -16,7 +16,7 @@
 <button on:click={getJoke}>Ny vits</button>
 
 {#if joke}
-	<p>{joke}</p>
+	<p>{joke.value}</p>
 {:else}
 	<p>Laster inn vits...</p>
 {/if}
