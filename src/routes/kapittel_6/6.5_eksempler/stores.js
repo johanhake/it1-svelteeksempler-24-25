@@ -1,5 +1,5 @@
 // Importerer persisted fra svelte-local-storage-store
-import { persisted } from 'svelte-local-storage-store'
+import { persisted } from 'svelte-persisted-store'
 
 // Bruker persisted til å definere en verdi som skal lagres og være tilgjengelig fra
 // andre svelte-filer.
@@ -7,5 +7,5 @@ import { persisted } from 'svelte-local-storage-store'
 export const navn = persisted("navn", "Johan")
 export const alder = persisted("alder", 46)
 export const bruker = persisted("bruker", {brukernavn: "Zvinto", fornavn: "Johan", etternavn: "Hake"})
-export const highscores = persisted("highscores", [["Johan", 34]])
+export const highscores = persisted("highscores", [{navn:"Johan", score:34}])
 

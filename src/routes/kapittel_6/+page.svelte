@@ -36,7 +36,12 @@
 			{ nr: "6.4.2", navn: "Chuck Norris vitser" },
 			{ nr: "6.4.3", navn: "Sminkevarer" },
 			{ nr: "6.4.5", navn: "Emojisøk" },
-		],
+		],		[
+			{ nr: "6.5.1", navn: "Lagre data" },
+			{ nr: "6.5.2", navn: "Hente frem data" },
+			{ nr: "6.5.3", navn: "Highscore" },
+			{ nr: "6.7.1", navn: "URL parametere" },
+		]
 	];
 
 	const oppgaver = [
