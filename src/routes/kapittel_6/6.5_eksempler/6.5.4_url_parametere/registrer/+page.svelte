@@ -9,6 +9,6 @@
 	const velgMat = url.searchParams.get('velgMat')
 
 </script>
-<a href="/eksempler_kap_6/6.7.1_url_parametere">Tilbake</a>
+<a href="/kapittel_6/6.5_eksempler/6.5.4_url_parametere">Tilbake</a>
 <h1>Tusen takk for din bestilling {navn}</h1>
 Du har bestilt {drikke} til å drikke og {velgMat} til å spise.

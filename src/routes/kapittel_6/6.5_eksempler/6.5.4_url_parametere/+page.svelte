@@ -5,7 +5,7 @@
 
 <h1>Bestill din mat!</h1>
 
-<form action="/kapittel_6/6.5_eksempler/6.7.1_url_parametere/registrer">
+<form action="/kapittel_6/6.5_eksempler/6.5.4_url_parametere/registrer">
   <input type="text" name="navn" placeholder="Hva heter du?" required>
   <label>Hva ønsker du å drikke til maten?</label>
   <div class="checkboxes">
