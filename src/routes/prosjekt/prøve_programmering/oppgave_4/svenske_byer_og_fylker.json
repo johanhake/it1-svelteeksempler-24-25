@@ -1,0 +1,16 @@
+{
+	"byer":[
+		{"navn":"Malmö", "fylke": "Skåne", "bilde": "malmoe.png"},
+		{"navn":"Helsingborg", "fylke": "Skåne", "bilde": "helsingborg.png"},
+		{"navn":"Ystad", "fylke": "Skåne", "bilde": "ystad.png"},
+		{"navn":"Växjö", "fylke": "Småland", "bilde": "vaexjoe.png"},
+		{"navn":"Kalmar", "fylke": "Småland", "bilde": "kalmar.png"},
+		{"navn":"Jönköping", "fylke": "Småland", "bilde": "joenkoeping.png"},
+		{"navn":"Östersund", "fylke": "Jämtland", "bilde": "oestersund.png"}
+	],
+	"fylker":[
+		{"navn": "Skåne", "bilde": "skaane.png"},
+		{"navn": "Småland", "bilde": "smaaland.png"},
+		{"navn": "Jämtland", "bilde": "jaemtland.png"}
+	]
+}
