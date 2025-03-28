@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
    let antall = $state(1);
    let laster = false;
    let kortstokk = $state([]);
@@ -55,6 +57,13 @@
 
 {#each kortstokk as kort}
    <div>
-      {JSON.stringify(kort)}
+      <img src={kort.images.png} alt="">
+      <h3>{sortnavn[kort.suit]} {valoernavn[kort.value]}</h3>
    </div>
 {/each}
+
+<style>
+   img{
+      width: 6rem;
+   }
+</style>

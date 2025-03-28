@@ -51,16 +51,17 @@
 <pre>{url}</pre>
 
 <h2>Resultat</h2>
-{page} of {totalPages}
+Side {page} av {totalPages}
 <button on:click={nesteSide}>neste</button>
 <section>
 {#each filmListe as film}
 <article>
 	<h3>{film.original_title}</h3>
 	<img src="{POSTERURL + film.poster_path}" alt="">
-	<p>
+<!--	<p>
 		{film.overview}
 	</p>
+	-->
 </article>
 
 
