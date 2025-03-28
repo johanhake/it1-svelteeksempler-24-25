@@ -122,7 +122,7 @@
 	{#if vis_oppgaver}
 		<div
 			class="oppgaver"
-			style="height:{2.5 * (antall_oppgaver / eksempler.length)}em"
+			style="height:{5.5 * (antall_oppgaver / eksempler.length)}em"
 		>
 			{#each oppgaver as underoppgaver, under_indeks}
 				<h4>Kapittel {6}.{under_indeks}</h4>
