@@ -15,14 +15,14 @@ let navn = ""
 let score = 0
 
 function sorted(highscores){
-  highscores.sort((a,b)=>a.score-b.score)
+  highscores.sort((a,b)=>b.score-a.score)
   return highscores
 }
 
 function sendinn(){
   console.log("JADA")
   // Legg til nytt highscore
-  highscores.update(data=>{return data})
+  highscores.update(data=>{data.push({navn: navn, score: score}); return data})
   navn = ""
   score = 0
 }
